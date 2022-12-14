@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+
+</head>
+<body>
+    <div>
+        
+        <form method="POST" action="">
+
+            <label>MaxTemp</label>
+            <input type="text" name="max_temp"><br>
+
+            <label>WindGustSpeed</label>
+            <input type="text" name="wgs"><br>
+
+            <label>Humidity9am</label>
+            <input type="text" name="hum9am"><br>
+
+            <label>Humidity3pm</label>
+            <input type="text" name="hum3pm"><br>
+
+            <label>Pressure9am</label>
+            <input type="text" name="pres9am"><br>
+
+            <label>Pressure3pm</label>
+            <input type="text" name="pres3pm"><br>
+
+            <label>Temp3pm</label>
+            <input type="text" name="temp3pm"><br>
+
+            <label>RainToday</label>
+            <input type="text" name="rain_today"><br>
+
+            <button type="submit">Prediksi</button>
+        </form>
+    </div>
+
+    {% if result %}
+        <h2>Result Hasil Prediksi</h2>
+        <h2>{{result}}</h2>
+    {% else %}
+        <h4>Data Belum Dimasukan</h4>
+        <p>Mohon isi data disamping</p>
+    {% endif %}
+                
+
+    
+</body>
+</html>
